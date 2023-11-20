@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wilson Lam - Speech Language Therapist | PhD Candidate | AI Enthusiast</title>
+  <style>
+    /* CSS styles here... */
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    /* Header styles */
+    header {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Navigation styles */
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 5px;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+    }
+
+    /* Main content styles */
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    section {
+      display: none; /* Hide all sections by default */
+      margin-bottom: 30px;
+    }
+
+    section#about {
+      display: block; /* Show the "About" section by default */
+    }
+
+    section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    section ul li {
+      margin-bottom: 5px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer p {
+      color: #fff;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wilson Yiu Shun Lam</h1>
+    <p>Speech Language Therapist | PhD Candidate | AI Enthusiast</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#" onclick="changeTab('about')">About</a></li>
+      <li><a href="#" onclick="changeTab('experience')">Experience</a></li>
+      <li><a href="#" onclick="changeTab('github')">GitHub</a></li>
+      <li><a href="#" onclick="changeTab('publications')">Publications</a></li>
+      <li><a href="#" onclick="changeTab('contact')">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Speech Language Therapist serving people with multiple disabilities</p>
+      <p>PhD Candidate in Computational Deglutology</p>
+    </section>
+    
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li>Clinical Instructor, Department of Special Education and Counseling, EdUHK (Hong Kong)</li>
+        <li>Visiting Lecturer, Department of Chinese and Bilingual Studies, PolyU (Hong Kong)</li>
+        <li>Speech Therapist, Wai Ji Christian Service (Hong Kong)</li>
+      </ul>
+    </section>
+    
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <!-- <li>Publication 1</li>
+        <li>Publication 2</li>
+        <li>Publication 3</li> -->
+      </ul>
+    </section>
+
+    <section id="github">
+        <h2>GitHub Repositories</h2>
+        <ul>
+          <!-- <li>Publication 1</li>
+          <li>Publication 2</li>
+          <li>Publication 3</li> -->
+        </ul>
+      </section>
+    
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: wlamcuhk@gmail.com</p>
+      <!-- <p>Phone: 123-456-7890</p> -->
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Wilson Lam</p>
+  </footer>
+  
+  <script>
+    function changeTab(tabId) {
+      // Hide all sections
+      var sections = document.getElementsByTagName("section");
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+      
+      // Show the selected section
+      var selectedSection = document.getElementById(tabId);
+      if (selectedSection) {
+        selectedSection.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
