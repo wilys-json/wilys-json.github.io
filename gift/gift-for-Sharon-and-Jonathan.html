@@ -56,10 +56,18 @@
                 const formattedURL = websiteInput.startsWith('http://') || websiteInput.startsWith('https://') 
                     ? websiteInput 
                     : 'https://wa.me/85265383455?text=' + '大哥、Kathy，我地揀好去玩嘅Package啦%E2%9C%88%20%F0%9F%9A%84%20%F0%9F%9A%A2%20%F0%9F%98%8A:\n' + websiteInput;
-
-                // Open the URL in a new tab
-                window.open(formattedURL, '_blank');
-                errorContainer.innerHTML = ''; // Clear previous error message
+             try {
+                    const response = await fetch(websiteInput, { method: 'HEAD' });
+                    if (response.ok) {
+                        // Open the URL in a new tab
+                        window.open(formattedURL, '_blank');
+                        errorContainer.innerHTML = ''; // Clear previous error message
+                    } else {
+                        throw new Error('Invalid URL');
+                    }
+                } catch (error) {
+                    errorContainer.innerHTML = 'The website is not reachable. Please check the URL.';
+                }
             } else {
                 errorContainer.innerHTML = 'Please enter a valid URL.';
             }
